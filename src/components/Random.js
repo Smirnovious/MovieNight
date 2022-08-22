@@ -20,7 +20,7 @@ export const Random = (props) => {
     
     const getGenres = async () => {
         let genreRequestEndpoint = '/genre/movie/list';
-        let requestParams = `?api_key=${process.env.REACT_APP_TMDB_KEY}`;
+        let requestParams = `?api_key=d3af3ba4f67429dfada1230e490ec2d5`;
         let urlToFetch = `https://api.themoviedb.org/3${genreRequestEndpoint}${requestParams}`
         try{
           const reponse = await fetch(urlToFetch);
@@ -38,7 +38,7 @@ export const Random = (props) => {
 
     const getMovies = async () => {
         const discoverMovieEndpoint = '/discover/movie';
-        const requestParams = `?api_key=${process.env.REACT_APP_TMDB_KEY}&with_genres=${genrePick}`;
+        const requestParams = `?api_key=d3af3ba4f67429dfada1230e490ec2d5&with_genres=${genrePick}`;
         const urlToFetch = `https://api.themoviedb.org/3${discoverMovieEndpoint}${requestParams}`;
         try {
          const response = await fetch(urlToFetch);
